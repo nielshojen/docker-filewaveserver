@@ -4,7 +4,7 @@ MAINTAINER Niels Højen <niels@hojen.net>
 
 ENV FWSERVER_VERSION 12.7.0
 
-RUN yum -y install wget unzip
+RUN yum -y install wget unzip rsync
 RUN wget https://fwdl.filewave.com/$FWSERVER_VERSION/FileWave_Linux_$FWSERVER_VERSION.zip
 RUN unzip FileWave_Linux_$FWSERVER_VERSION.zip
 RUN rm -f fwbooster-$FWSERVER_VERSION-1.0.x86_64.rpm
