@@ -10,7 +10,7 @@ RUN unzip FileWave_Linux_$FWSERVER_VERSION.zip
 RUN rm -f fwbooster-$FWSERVER_VERSION-1.0.x86_64.rpm
 RUN yum install -y --nogpgcheck fwxserver-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 
-CMD /usr/local/sbin/fwsxerver
+CMD /usr/local/sbin/fwxserver
 
 VOLUME /fwxserver
 VOLUME /usr/local/etc/fwxserver.conf
