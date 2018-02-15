@@ -13,8 +13,7 @@ RUN yum install -y --nogpgcheck fwxserver-$FWSERVER_VERSION-1.0.x86_64.rpm
 CMD /usr/local/sbin/fwxserver
 
 VOLUME /fwxserver
-VOLUME /usr/local/etc/fwxserver.conf
-VOLUME /usr/local/etc/fwxcodes
+VOLUME /usr/local/etc
 
 EXPOSE 20005
 EXPOSE 20006
