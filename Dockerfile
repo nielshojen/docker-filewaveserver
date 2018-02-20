@@ -4,13 +4,14 @@ MAINTAINER Niels Højen <niels@hojen.net>
 
 ENV FWSERVER_VERSION 12.7.0
 
-RUN yum -y install wget unzip rsync
+RUN yum -y install wget unzip rsync initscripts
 RUN wget https://fwdl.filewave.com/$FWSERVER_VERSION/FileWave_Linux_$FWSERVER_VERSION.zip
 RUN unzip FileWave_Linux_$FWSERVER_VERSION.zip
 RUN rm -f fwbooster-$FWSERVER_VERSION-1.0.x86_64.rpm
 RUN yum install -y --nogpgcheck fwxserver-$FWSERVER_VERSION-1.0.x86_64.rpm
 
-CMD /usr/local/sbin/fwxserver
+CMD /etc/init.d/fw-server start
+CMD /usr/bin/tail -F /private/var/log/fwxserver.log
 
 VOLUME /fwxserver
 VOLUME /usr/local/etc
