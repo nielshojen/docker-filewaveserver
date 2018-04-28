@@ -1,6 +1,6 @@
 # FileWave Server Docker Image
 
-This Docker image runs a FileWave Booster
+This Docker image runs a FileWave Server
 
 # Settings
 
@@ -9,7 +9,7 @@ Several options are customizable using environment variables.
 * ``FWSERVER_BACKUP``: If the FileWave provided backup script should run daily. Defaults to ``0``.
 
 
-# Running the FileWave Booster Container
+# Running the FileWave Server Container
 
 ```bash
 $ docker pull nielshojen/filewaveserver
@@ -19,7 +19,7 @@ $ docker run -d --restart always --name=filewaveserver \
   nielshojen/filewaveserver
 ```
 
-# Persisting the Booster Data
+# Persisting the Server Data
 
 The booster data lives in /fwxserver, config lives in /usr/local/filewave and backup lives in /backup (if enabled) so mounting those to a directory on the host would require extra lines:
 
@@ -37,7 +37,7 @@ $ docker run -d --restart always --name=filewaveserver \
 
 # Specific Versions
 
-You can use the version tag to run a specific version fo the booster if needed (eg. 12.8.0):
+You can use the version tag to run a specific version of the server if needed (eg. 12.8.0):
 
 ```bash
 $ docker pull nielshojen/filewaveserver:12.8.0
