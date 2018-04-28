@@ -5,6 +5,8 @@ MAINTAINER Niels Højen <niels@hojen.net>
 ENV FWSERVER_VERSION 12.8.0
 ENV FWSERVER_BACKUP 0
 
+VOLUME /backup
+
 RUN yum -y install wget unzip rsync initscripts
 RUN wget https://fwdl.filewave.com/$FWSERVER_VERSION/FileWave_Linux_$FWSERVER_VERSION.zip
 RUN unzip FileWave_Linux_$FWSERVER_VERSION.zip
