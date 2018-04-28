@@ -7,6 +7,7 @@ ENV FWSERVER_BACKUP 0
 
 VOLUME /fwxserver
 VOLUME /usr/local/etc
+VOLUME /backup
 
 RUN yum -y install wget unzip rsync initscripts
 RUN wget https://fwdl.filewave.com/$FWSERVER_VERSION/FileWave_Linux_$FWSERVER_VERSION.zip
