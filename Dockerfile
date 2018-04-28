@@ -3,6 +3,7 @@ FROM centos:centos7
 MAINTAINER Niels Højen <niels@hojen.net>
 
 ENV FWSERVER_VERSION 12.8.0
+ENV FWSERVER_BACKUP 0
 
 VOLUME /fwxserver
 VOLUME /usr/local/etc
