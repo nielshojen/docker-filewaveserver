@@ -7,7 +7,7 @@ if [ $FWSERVER_BACKUP -eq 1 ]; then
 fi
 
 if [[ ! $(/etc/init.d/fw-server status | /usr/bin/grep running) ]]; then
+  /etc/init.d/fw-server start
 fi
 
-#/etc/init.d/fw-server start
 /usr/bin/tail -F /private/var/log/fwxserver.log
