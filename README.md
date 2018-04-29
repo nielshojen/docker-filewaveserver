@@ -33,6 +33,7 @@ $ docker run -d --restart always --name=filewaveserver \
   -v /local/host/folder/filewaveserver/config/fwxserver.conf:/usr/local/etc/fwxserver.conf \
   -v /local/host/folder/filewaveserver/config/apache/conf:/usr/local/filewave/apache/conf \
   -v /local/host/folder/filewaveserver/config/apache/passwd:/usr/local/filewave/apache/passwd \
+  -v /local/host/folder/filewaveserver/config/certs:/usr/local/filewave/certs \
   -v /local/host/folder/filewaveserver/ipa:/usr/local/filewave/ipa \
   -v /local/host/folder/filewaveserver/media:/usr/local/filewave/media \
   -v /local/host/folder/filewaveserver/backup:/backup \
@@ -53,6 +54,7 @@ $ docker run -d --restart always --name=filewaveserver \
   -v /local/host/folder/filewaveserver/config/fwxserver.conf:/usr/local/etc/fwxserver.conf \
   -v /local/host/folder/filewaveserver/config/apache/conf:/usr/local/filewave/apache/conf \
   -v /local/host/folder/filewaveserver/config/apache/passwd:/usr/local/filewave/apache/passwd \
+  -v /local/host/folder/filewaveserver/config/certs:/usr/local/filewave/certs \
   -v /local/host/folder/filewaveserver/ipa:/usr/local/filewave/ipa \
   -v /local/host/folder/filewaveserver/media:/usr/local/filewave/media \
   -v /local/host/folder/filewaveserver/backup:/backup \
