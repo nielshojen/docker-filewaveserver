@@ -8,6 +8,8 @@ Several options are customizable using environment variables.
 
 * ``FWSERVER_BACKUP``: If the FileWave provided backup script should run daily. Defaults to ``0``.
 
+Default exposed ports are: ``20005``, ``20006``, ``20015``, ``20016``, ``20017``, ``20030``, ``20443``, ``20445``, ``20446``
+
 
 # Running the FileWave Server Container
 
