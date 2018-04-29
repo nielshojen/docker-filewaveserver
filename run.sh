@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if [[ ! $(/bin/ls -A /usr/local/filewave) ]]; then
+# Make sure all is good if server or config data is mounted to host dir
+if [[ ! $(/bin/ls -A /usr/local/filewave) ]] || [[ ! $(/bin/ls -A /fwxserver) ]]; then
   yum reinstall -y --nogpgcheck fwxserver-$FWSERVER_VERSION-1.0.x86_64.rpm
 fi
 
