@@ -17,7 +17,15 @@ Default exposed ports are: ``20005``, ``20006``, ``20015``, ``20016``, ``20017``
 $ docker pull nielshojen/filewaveserver
 $ docker run -d --restart always --name=filewaveserver \
   --restart="always" \
-  --net=host \
+  -p 20005:20005 \
+  -p 20006:20006 \
+  -p 20015:20015 \
+  -p 20016:20016 \
+  -p 20017:20017 \
+  -p 20030:20030 \
+  -p 20443:20443 \
+  -p 20445:20445 \
+  -p 20446:20446 \
   nielshojen/filewaveserver
 ```
 
@@ -28,7 +36,15 @@ The server data lives in /fwxserver, config file lives in /usr/local/etc, differ
 $ docker pull nielshojen/filewaveserver
 $ docker run -d --restart always --name=filewaveserver \
   --restart="always" \
-  --net=host \
+  -p 20005:20005 \
+  -p 20006:20006 \
+  -p 20015:20015 \
+  -p 20016:20016 \
+  -p 20017:20017 \
+  -p 20030:20030 \
+  -p 20443:20443 \
+  -p 20445:20445 \
+  -p 20446:20446 \
   -v /local/host/folder/filewaveserver/data:/fwxserver \
   -v /local/host/folder/filewaveserver/config/fwxserver.conf:/usr/local/etc/fwxserver.conf \
   -v /local/host/folder/filewaveserver/config/apache/conf:/usr/local/filewave/apache/conf \
@@ -49,7 +65,15 @@ You can use the version tag to run a specific version of the server if needed (e
 $ docker pull nielshojen/filewaveserver:12.9.0
 $ docker run -d --restart always --name=filewaveserver \
   --restart="always" \
-  --net=host \
+  -p 20005:20005 \
+  -p 20006:20006 \
+  -p 20015:20015 \
+  -p 20016:20016 \
+  -p 20017:20017 \
+  -p 20030:20030 \
+  -p 20443:20443 \
+  -p 20445:20445 \
+  -p 20446:20446 \
   -v /local/host/folder/filewaveserver/data:/fwxserver \
   -v /local/host/folder/filewaveserver/config/fwxserver.conf:/usr/local/etc/fwxserver.conf \
   -v /local/host/folder/filewaveserver/config/apache/conf:/usr/local/filewave/apache/conf \
