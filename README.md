@@ -23,7 +23,7 @@ $ docker run -d --restart always --name=filewaveserver \
 
 # Persisting the Server Data
 
-The booster data lives in /fwxserver, config file lives in /usr/local/etc, different important files live in /usr/local/filewave and backup lives in /backup (if enabled) so mounting those to directories/files on the host would be a good idea and requires extra lines:
+The server data lives in /fwxserver, config file lives in /usr/local/etc, different important files live in /usr/local/filewave and backup lives in /backup (if enabled) so mounting those to directories/files on the host would be a good idea and requires extra lines:
 ```bash
 $ docker pull nielshojen/filewaveserver
 $ docker run -d --restart always --name=filewaveserver \
