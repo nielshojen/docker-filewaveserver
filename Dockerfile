@@ -2,12 +2,12 @@ FROM centos:centos7
 
 MAINTAINER Niels Højen <niels@hojen.net>
 
-ENV FWSERVER_VERSION 13.0.2
+ENV FWSERVER_VERSION 13.2.3
 ENV FWSERVER_BACKUP 0
 
-VOLUME /fwxserver
 VOLUME /usr/local/etc
 VOLUME /usr/local/filewave
+VOLUME /usr/local/filewave/fwxserver
 VOLUME /backup
 
 RUN yum -y install wget unzip rsync initscripts
