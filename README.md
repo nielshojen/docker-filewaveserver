@@ -47,7 +47,7 @@ $ docker run -d --restart always --name=filewaveserver \
   -p 20443:20443 \
   -p 20445:20445 \
   -p 20446:20446 \
-  -v /local/host/folder/filewaveserver/data:/fwxserver \
+  -v /local/host/folder/filewaveserver/data:/usr/local/filewave/fwxserver \
   -v /local/host/folder/filewaveserver/config/fwxserver.conf:/usr/local/etc/fwxserver.conf \
   -v /local/host/folder/filewaveserver/config/apache/conf:/usr/local/filewave/apache/conf \
   -v /local/host/folder/filewaveserver/config/apache/passwd:/usr/local/filewave/apache/passwd \
@@ -61,10 +61,10 @@ $ docker run -d --restart always --name=filewaveserver \
 
 # Specific Versions
 
-You can use the version tag to run a specific version of the server if needed (eg. 12.9.0):
+You can use the version tag to run a specific version of the server if needed, which you probably should do anyway (eg. 13.2.3):
 
 ```bash
-$ docker pull nielshojen/filewaveserver:12.9.0
+$ docker pull nielshojen/filewaveserver:13.2.3
 $ docker run -d --restart always --name=filewaveserver \
   --restart="always" \
   -p 20005:20005 \
@@ -85,5 +85,5 @@ $ docker run -d --restart always --name=filewaveserver \
   -v /local/host/folder/filewaveserver/media:/usr/local/filewave/media \
   -v /local/host/folder/filewaveserver/backup:/backup \
   -e FWSERVER_BACKUP=1 \
-  nielshojen/filewaveserver:12.9.0
+  nielshojen/filewaveserver:13.2.3
 ```
