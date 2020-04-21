@@ -76,7 +76,7 @@ $ docker run -d --restart always --name=filewaveserver \
   -p 20443:20443 \
   -p 20445:20445 \
   -p 20446:20446 \
-  -v /local/host/folder/filewaveserver/data:/fwxserver \
+  -v /local/host/folder/filewaveserver/data:/usr/local/filewave/fwxserver \
   -v /local/host/folder/filewaveserver/config/fwxserver.conf:/usr/local/etc/fwxserver.conf \
   -v /local/host/folder/filewaveserver/config/apache/conf:/usr/local/filewave/apache/conf \
   -v /local/host/folder/filewaveserver/config/apache/passwd:/usr/local/filewave/apache/passwd \
