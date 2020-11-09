@@ -11,11 +11,7 @@ VOLUME /usr/local/filewave/fwxserver
 VOLUME /backup
 
 RUN yum -y install wget unzip rsync initscripts
-RUN wget [INSERT DOWNLOAD URL HERE]
-RUN unzip FileWave_Linux_$FWSERVER_VERSION.zip
-RUN rm -f FileWave_Linux_$FWSERVER_VERSION.zip
-RUN rm -f fwbooster-$FWSERVER_VERSION-1.0.x86_64.rpm
-RUN yum install -y --nogpgcheck fwxserver-$FWSERVER_VERSION-1.0.x86_64.rpm
+RUN yum install -y --nogpgcheck https://fwdl.filewave.com/${FWSERVER_VERSION}/fwxserver-${FWSERVER_VERSION}-1.0.x86_64.rpm
 
 ADD backup_server_osx_linux.sh /backup_server_osx_linux.sh
 ADD run.sh /run.sh
