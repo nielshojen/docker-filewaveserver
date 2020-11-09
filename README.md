@@ -61,10 +61,10 @@ $ docker run -d --restart always --name=filewaveserver \
 
 # Specific Versions
 
-You can use the version tag to run a specific version of the server if needed, which you probably should do anyway (eg. 13.2.3):
+You can use the version tag to run a specific version of the server if needed, which you probably should do anyway (eg. 13.3.1):
 
 ```bash
-$ docker pull nielshojen/filewaveserver:13.2.3
+$ docker pull nielshojen/filewaveserver:13.3.1
 $ docker run -d --restart always --name=filewaveserver \
   --restart="always" \
   -p 20005:20005 \
@@ -85,5 +85,5 @@ $ docker run -d --restart always --name=filewaveserver \
   -v /local/host/folder/filewaveserver/media:/usr/local/filewave/media \
   -v /local/host/folder/filewaveserver/backup:/backup \
   -e FWSERVER_BACKUP=1 \
-  nielshojen/filewaveserver:13.2.3
+  nielshojen/filewaveserver:13.3.1
 ```
