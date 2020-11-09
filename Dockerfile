@@ -2,7 +2,7 @@ FROM centos:centos7
 
 MAINTAINER Niels Højen <niels@hojen.net>
 
-ENV FWSERVER_VERSION 13.2.3
+ENV FWSERVER_VERSION 13.3.1
 ENV FWSERVER_BACKUP 0
 
 VOLUME /usr/local/etc
