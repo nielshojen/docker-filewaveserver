@@ -3,7 +3,7 @@
 # Make sure all is good if server or config data is mounted to host dir
 if [[ ! $(/bin/ls -A /usr/local/etc 2>/dev/null) ]] || [[ ! $(/bin/ls -A /usr/local/filewave 2>/dev/null) ]] || [[ ! $(/bin/ls -A /usr/local/filewave/fwxserver 2>/dev/null) ]]; then
   echo "### Reinstalling because some files are missing. Probably because some servers/files have been mounted to host. ###"
-  yum reinstall -y --nogpgcheck fwxserver-$FWSERVER_VERSION-1.0.x86_64.rpm
+  yum reinstall -y --nogpgcheck https://fwdl.filewave.com/${FWSERVER_VERSION}/fwxserver-${FWSERVER_VERSION}-1.0.x86_64.rpm
 fi
 
 # Setup the backup
